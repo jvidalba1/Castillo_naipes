@@ -1,0 +1,79 @@
+import java.io.*;
+
+public class LeerA 
+{
+	public String leer(File f)
+	{
+		String temp = "";
+		String temp2 = "";
+		try
+		{
+			BufferedReader br = new BufferedReader(new FileReader( f ));
+			temp = temp + br.readLine();
+			temp2 = br.readLine();
+			if(!temp2.equals("null"))
+			{
+				temp = temp + temp2;
+			    temp = temp + br.readLine();
+			    temp2 = br.readLine();
+			    if(!temp2.equals("null"))
+				{
+					temp = temp + temp2;
+				    temp = temp + br.readLine();
+				    temp2 = br.readLine();
+				    if(!temp2.equals("null"))
+					{
+						temp = temp + temp2;
+					    temp = temp + br.readLine();
+						do
+						{
+							temp = temp + br.readLine();
+							
+						}while(!temp.substring(temp.length()-4, temp.length()).equals("null"));
+				
+					}
+				}
+			}		
+			if(temp.length()>=4)
+			{
+				temp = temp.substring(0, temp.length()-4);
+			}
+		}
+		catch(Exception e)
+		{
+			
+		}
+		return temp;
+	}
+	
+	public String leer2(File f)
+	{
+		String temp = "";
+		try
+		{
+			FileReader br = new FileReader( f );
+			temp = temp + br.read();
+			
+			/**
+			do
+			{
+				temp = temp + br.readLine();
+				System.out.println(temp.substring(temp.length()-4, temp.length()));
+				
+			}while(!temp.substring(temp.length()-4, temp.length()).equals("null"));
+			*/
+		}
+		
+		catch(Exception e)
+		{
+			
+		}
+		return temp;
+	}
+	
+	public static void main(String []args)
+	{
+		LeerA l = new LeerA();
+		System.out.println(l.leer(new File("C:/Users/HORUS793/Desktop/q.txt")));
+	}
+}
