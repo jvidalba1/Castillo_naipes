@@ -1,7 +1,7 @@
 ##Problema ACM
 ###Autores
 
-#### José Mateo Vidal Barrera
-#### Alejandro Marín Buriticá
+#### Jose Mateo Vidal Barrera
+#### Alejandro Marin Buritica
 #### Windsor Angelho Franco Quiroz
 
